@@ -1,0 +1,23 @@
+<%namespace file="../main.html" import="stanford_theme_enabled" />
+我们收到了把
+${settings.PLATFORM_NAME}  帐户关联的邮箱从 ${old_email} 改变到 的要求。
+如果这确实是您的要求， 请访问以下链接确认您的新的E-mail地址：
+
+% if is_secure:
+ https://${ site }/email_confirm/${ key }
+% else:
+ http://${ site }/email_confirm/${ key }
+% endif
+
+## TODO: fix this ugly hack
+% if stanford_theme_enabled():
+    如果您没发出过该请求，您不需要做任何事情;
+    您将不会收到其他任何电子邮件。 请不要回复此电子邮件，
+    如果您需要帮助，请访问 
+    ${settings.PLATFORM_NAME} 网站。
+% else:
+    如果您没发出过该请求，您不需要做任何事情;
+    您将不会收到其他任何电子邮件。 请不要回复此电子邮件，
+    如果您需要帮助，请访问 
+    ${settings.PLATFORM_NAME} 网站。
+% endif

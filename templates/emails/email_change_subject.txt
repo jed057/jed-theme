@@ -1,0 +1,1 @@
+请求更改 ${settings.PLATFORM_NAME} 账户电子邮件地址

@@ -1,0 +1,25 @@
+<%namespace file="../main.html" import="stanford_theme_enabled" />
+<%! from django.utils.translation import ugettext as _ %>
+
+${_(u"谢谢您注册 {platform_name}! 为了激活 "
+u"您的账号, 请将下面的地址复制并粘贴到您的"
+u"浏览器地址栏：").format(platform_name=settings.PLATFORM_NAME)}
+
+% if is_secure:
+  https://${ site }/activate/${ key }
+% else:
+  http://${ site }/activate/${ key }
+% endif
+
+## Temporary hack until we develop a better way to adjust language
+% if stanford_theme_enabled():
+    如果您没发出过该请求，您不需要做任何事情;
+    您将不会收到其他任何电子邮件。 请不要回复此电子邮件，
+    如果您需要帮助，请访问 
+    ${settings.PLATFORM_NAME} 网站。
+% else:
+    如果您没发出过该请求，您不需要做任何事情;
+    您将不会收到其他任何电子邮件。 请不要回复此电子邮件，
+    如果您需要帮助，请访问 
+    ${settings.PLATFORM_NAME} 网站。
+% endif

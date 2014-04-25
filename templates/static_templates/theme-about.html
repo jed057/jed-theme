@@ -1,0 +1,57 @@
+<%! from django.core.urlresolvers import reverse %>
+<%namespace name='static' file='/static_content.html'/>
+
+<%inherit file="/main.html" />
+
+<%block name="pagetitle">关于</%block>
+
+<%block name="js_extra">
+  <script type="text/javascript">
+    $(function() {
+        $('section.message').hide();
+        $('#about-menu a').removeClass('active');
+        window.scrollTo(0,0);
+
+        if (document.location.href.indexOf('#ibc') > -1) {
+            $('section#ibc').show();
+            $('#about-menu a.ibc').addClass('active');
+        } else {
+            $('section#about').show();
+            $('#about-menu a.about').addClass('active');
+        }
+
+        $('#about-menu a').click(function(event) {
+            event.preventDefault();
+            $('#about-menu a').removeClass('active');
+            $(this).addClass('active');
+            var clickId = "section" + $(this).attr('href');
+            $('section.message').hide();
+            $(clickId).show();
+        });
+    });
+  </script>
+</%block>
+
+<section class="container about">
+  <nav id="about-menu">
+    <a href="#about" class="about active">关于</a>
+    
+  </nav>
+
+  <section class="vision">
+    <section class="message left" id="about">
+      <div class="photo">
+        <img src="${static.url('themes/ioc-bistux-theme/images/bistux-campus.jpg')}" alt="bistux-campus" />
+      </div>
+      <article>
+        <h2>关于 BistuX</span></h2>
+
+        <p>BixtuX正在开发新的在线课程,以改进学校教育，为公众提供优秀的学习机会。由 北京信息科技大学<a href="http://iflab.org">ifLab</a>云计算小组基于 OpenEdX 平台搭建开发。</p>
+      </article>
+      <hr class="fade-right-hr-divider">
+    </section>
+
+   
+  </section>
+
+</section>

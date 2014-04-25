@@ -1,0 +1,307 @@
+/* ==========================================================================
+   Global
+   ========================================================================== */
+
+h2 {
+    color: #2daae1;
+}
+
+
+/* ==========================================================================
+   Content
+   ========================================================================== */
+
+.content-wrapper,
+.view-register .content-wrapper,
+.view-login .content-wrapper,
+.view-passwordreset .content-wrapper {
+    background-color: #eef0f1;
+}
+
+.content-wrapper .find-courses header.search .inner-wrapper.main-search {
+    display: none;
+}
+
+.view-register .content-wrapper .container,
+.view-register .content-wrapper .introduction,
+.view-login .content-wrapper .container,
+.view-login .content-wrapper .introduction,
+.view-passwordreset .content-wrapper .container,
+.view-passwordreset .content-wrapper .introduction {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+
+    width: auto;
+    max-width: 1170px;
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 15px;
+    padding-right: 15px;
+    background: none;
+}
+
+.view-register .content-wrapper .container > section.content,
+.view-login .content-wrapper .container > section.content,
+.view-passwordreset .content-wrapper .container > section.content {
+    width: auto;
+    min-width: 700px;
+    margin: 20px 30px 0 0;
+}
+
+.view-login .content-wrapper .introduction > header,
+.view-register .content-wrapper .introduction > header,
+.view-passwordreset .content-wrapper .introduction > header {
+    height: auto;
+    margin-top: 30px;
+    border-bottom: 1px solid #8a8c8f;
+}
+
+.view-login .content-wrapper .introduction > header > h1.title,
+.view-register .content-wrapper .introduction > header > h1.title,
+.view-passwordreset .content-wrapper .introduction > header > h1.title {
+    position: static;
+    padding: 0;
+    margin: 0 0 30px 0;
+}
+
+.view-login .content-wrapper .introduction > header > h1.title > span.title-super,
+.view-login .content-wrapper .introduction > header > h1.title > span.title-sub,
+.view-register .content-wrapper .introduction > header > h1.title > span.title-super,
+.view-register .content-wrapper .introduction > header > h1.title > span.title-sub,
+.view-passwordreset .content-wrapper .introduction > header > h1.title > span.title-super,
+.view-passwordreset .content-wrapper .introduction > header > h1.title > span.title-sub {
+    text-transform: none;
+}
+
+/* ==========================================================================
+   Footer
+   ========================================================================== */
+
+.view-login .wrapper-footer > footer,
+.view-register .wrapper-footer > footer,
+.view-passwordreset .wrapper-footer > footer,
+.wrapper-footer > footer {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+
+    width: auto;
+    max-width: 1170px;
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+.wrapper-footer > footer > p {
+    color: #fff;
+    font-size: 14px;
+}
+
+
+/* ==========================================================================
+   Header
+   ========================================================================== */
+
+header.global,
+header.global.slim {
+    -webkit-box-shadow: none;
+    -moz-box-shadow: none;
+    box-shadow: none;
+
+    height: 100px;
+    padding: 0;
+    border-bottom: 1px solid #f2f1eb;
+}
+
+header.global > nav,
+header.global.slim > nav {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+
+    height: auto;
+    width: auto;
+    padding: 15px 10px 0px;
+    max-width: 1170px;
+    margin-right: auto;
+    margin-left: auto;
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+.view-login header.global > nav,
+.view-register header.global > nav {
+    width: auto;
+}
+
+header.global.slim > nav h1.logo:before {
+    display: none;
+}
+
+header.global.slim > nav h2 {
+    padding: 0;
+    color: white;
+    text-shadow: none;
+    margin: 25px 10px 0 10px;
+}
+
+header.global.slim > nav h2 span {
+    color: #eef0f1;
+}
+
+header.global > nav h1.logo,
+header.global.slim > nav h1.logo {
+    margin: -2px 39px 0px 0px;
+    padding: 0;
+    float: left;
+}
+
+header.global > nav h1.logo img,
+header.global.slim > nav h1.logo img {
+    height: auto;
+}
+
+header.global ol.nav-global {
+    margin-top: 24px;
+}
+
+.view-login header.global ol.nav-global li a,
+.view-register header.global ol.nav-global li a,
+header.global ol.nav-global li a {
+    font-weight: normal;
+    color: #eef0f1 !important;
+}
+
+.view-login header.global ol.nav-global li a:hover,
+.view-register header.global ol.nav-global li a:hover,
+header.global ol.nav-global li a:hover {
+    color: #fff !important;
+}
+
+header.global ol.nav-courseware {
+    margin-top: 20px;
+}
+
+.view-login header.global ol.nav-courseware li a.cta-login,
+header.global ol.nav-courseware li a.cta-login {
+    -webkit-transition: none;
+    transition: none;
+    -webkit-border-radius: 0;
+    border-radius: 0;
+
+    display: inline-block;
+    background-color: #eef0f1;
+    color: black;
+    font-size: 14px;
+    padding: 10px 15px;
+}
+
+header.global ol.nav-courseware li a.cta-login:hover {
+    background-color: #fff;
+}
+
+header.global ol.user {
+    margin-top: 20px;
+}
+
+header.global ol.user ul.dropdown-menu {
+    right: -3px;
+    border: 0 none;
+    padding: 4px 8px;
+    z-index: 10;
+}
+
+header.global ol.user ul.dropdown-menu li > a {
+    border: 0 none;
+    outline: none;
+    color: #303030;
+}
+
+header.global ol.user ul.dropdown-menu li > a:hover {
+    background-color: #eef0f1;
+}
+
+header.global ol.user > li.primary > a {
+    border: 0 none;
+    background-color: #eef0f1;
+}
+
+header.global ol.user > li.primary > a:hover {
+    background-color: #fff;
+}
+
+/* ==========================================================================
+   Dashboard
+   ========================================================================== */
+
+section.dashboard section.profile-sidebar header.profile {
+    display: none;
+}
+
+section.dashboard section.profile-sidebar section.user-info {
+    border-right: 1px solid #ddd;
+}
+
+section.dashboard section.profile-sidebar section.user-info > ul {
+    -webkit-box-shadow: none;
+    -moz-box-shadow: none;
+    box-shadow: none;
+
+    background: none;
+    border: 0 none;
+    padding: 0 10px 10px
+}
+
+section.dashboard section.my-courses .listing-courses .course-item {
+    border-bottom-width: 1px;
+    border-bottom-color: #eee;
+}
+
+section.dashboard section.my-courses .empty-dashboard-message {
+    padding: 20px 0;
+}
+
+section.dashboard section.my-courses .empty-dashboard-message > a {
+    -webkit-box-shadow: none;
+    -moz-box-shadow: none;
+    box-shadow: none;
+
+    margin: 0;
+    padding: 8px 12px;
+    background-color: #fff;
+    border-color: #ddd;
+}
+
+/* ==========================================================================
+   Course about page
+   ========================================================================== */
+
+section.course-info section.details section {
+    overflow: hidden;
+    clear: both;
+}
+
+section.course-info section.details section p {
+    text-align: left;
+}
+
+section.course-info section.details section p.justified {
+    text-align: justify;
+}
+
+section.course-info section.details .inner-wrapper section.course-staff {
+    margin-bottom: 0;
+}
+
+section.course-info section.details .inner-wrapper section.course-staff article.teacher .teacher-image {
+    width: 120px;
+    height: 160px;
+    margin: 5px 17px 0 0;
+}
+
+section.course-info section.details .inner-wrapper section.course-staff article.teacher .teacher-image img {
+    width: 120px;
+    height: 160px;
+}

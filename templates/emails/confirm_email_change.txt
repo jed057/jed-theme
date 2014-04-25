@@ -1,0 +1,24 @@
+<%! from django.core.urlresolvers import reverse %>
+<%namespace file="../main.html" import="stanford_theme_enabled" />
+## Again, ugly hack that needs to be changed
+## TODO: this probably needs better formatting to look nice in an
+##       email client (Mako leaves awkward whitespace)
+% if stanford_theme_enabled():
+  这是为了确认您已经将 
+  ${settings.PLATFORM_NAME} 的邮箱从 ${old_email} 更改到了 ${new_email} 
+  的要求。如果这不是您的要求，请立即联系我们。地址如下：
+  
+  ${settings.CONTACT_EMAIL}
+% else:
+  这是为了确认您已经将 
+  ${settings.PLATFORM_NAME} 的邮箱从 ${old_email} 更改到了 ${new_email} 
+  的要求。如果这不是您的要求，请立即联系我们。地址如下：
+
+  % if is_secure:
+    https://${ site }${reverse('contact')}
+  % else:
+    http://${ site }${reverse('contact')}
+  % endif
+% endif
+
+我们拥有原电子邮件的日志，如果这个请求是无意的，我们可以进行调查。

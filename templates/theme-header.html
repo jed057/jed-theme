@@ -1,0 +1,27 @@
+## mako
+<%namespace name='static' file='/static_content.html'/>
+<%inherit file="/navigation.html"/>
+
+<%block name="navigation_top">
+</%block>
+
+<%block name="navigation_logo">
+  <img src="${static.url('themes/ioc-bistux-theme/images/logo.png')}" alt="BistuX Courses" width="145" height="70" />
+</%block>
+
+## When unauthenticated, only show the about page link
+<%block name="navigation_global_links">
+  <li class="nav-global-01">
+    <a href="${marketing_link('ABOUT')}">关于</a>
+  </li>
+</%block>
+
+## When authenticated, show both the about page and find courses
+<%block name="navigation_global_links_authenticated">
+  <li class="nav-global-01">
+    <a href="${marketing_link('ABOUT')}">关于</a>
+  </li>
+  <li class="nav-global-02">
+    <a href="${marketing_link('COURSES')}">查找课程</a>
+  </li>
+</%block>
