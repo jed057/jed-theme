@@ -24,10 +24,14 @@ $border-color-2: $ioc-grey-2;
 $border-color-3: $ioc-grey-2;
 $outer-border-color: $ioc-grey-2;
 
-$homepage-bg-image: url('../themes/ioc-bistux-theme/images/bistux-online.jpg');
+$homepage-bg-image: url('../themes/jed-bistux-theme/images/bistux-online.jpg');
 $login-banner-image: none;
 $register-banner-image: none;
+<<<<<<< HEAD:static/sass/_jed-theme.scss
 $video-thumb-url: '../themes/jed-theme/images/video-thumb.png';
+=======
+$video-thumb-url: '../themes/jed-bistux-theme/images/bistux-video-thumb.png';
+>>>>>>> 6e143edb80534c9da34a309006770f813a73a38e:static/sass/_ioc-bistux-theme.scss
 
 $baseline: 20px;
 
